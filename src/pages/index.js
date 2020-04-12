@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 
-import Bio from '../components/bio'
-import Layout from '../components/layout'
-import SEO from '../components/seo'
+import { Header } from '../components/Header'
+import { Wrapper } from '../components/Wrapper'
+import { Head } from '../components/Head'
 import { rhythm } from '../utils/typography'
 
 const BlogIndex = ({ data, location }) => {
@@ -11,9 +11,9 @@ const BlogIndex = ({ data, location }) => {
   const posts = data.allMarkdownRemark.edges
 
   return (
-    <Layout location={location} title={siteTitle}>
-      <SEO title="All posts" />
-      <Bio />
+    <Wrapper location={location} title={siteTitle}>
+      <Head title="All posts" />
+      <Header />
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
@@ -40,7 +40,7 @@ const BlogIndex = ({ data, location }) => {
           </article>
         )
       })}
-    </Layout>
+    </Wrapper>
   )
 }
 

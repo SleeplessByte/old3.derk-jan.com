@@ -1,13 +1,15 @@
 import { Link, graphql } from 'gatsby'
 import { formatPostDate, formatReadingTime } from '../utils/helpers'
 
-import Bio from '../components/Bio'
 import Footer from '../components/Footer'
-import Layout from '../components/Layout'
 import Panel from '../components/Panel'
 import React from 'react'
-import SEO from '../components/SEO'
 import get from 'lodash/get'
+
+import { Header } from '../components/Header'
+import { Wrapper } from '../components/Wrapper'
+import { Head } from '../components/Head'
+
 import { rhythm } from '../utils/typography'
 
 class BlogIndexTemplate extends React.Component {
@@ -18,10 +20,10 @@ class BlogIndexTemplate extends React.Component {
     const posts = get(this, 'props.data.allMarkdownRemark.edges')
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO />
+      <Wrapper location={this.props.location} title={siteTitle}>
+        <Head />
         <aside>
-          <Bio />
+          <Header />
         </aside>
         <main>
           {langKey !== 'en' && langKey !== 'ru' && (
@@ -73,7 +75,7 @@ class BlogIndexTemplate extends React.Component {
           })}
         </main>
         <Footer />
-      </Layout>
+      </Wrapper>
     )
   }
 }

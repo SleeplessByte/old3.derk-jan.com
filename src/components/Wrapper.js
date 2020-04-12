@@ -7,7 +7,7 @@ import { rhythm, scale } from '../utils/typography'
 import sun from '../assets/sun.png'
 import moon from '../assets/moon.png'
 
-class Layout extends React.Component {
+export class Wrapper extends React.Component {
   state = {
     theme: null
   }
@@ -143,5 +143,3 @@ class Layout extends React.Component {
     )
   }
 }
-
-export default Layout

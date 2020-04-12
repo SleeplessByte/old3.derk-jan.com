@@ -3,9 +3,6 @@ import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
 
 import '../fonts/fonts-post.css'
-import Bio from '../components/Bio'
-import Layout from '../components/Layout'
-import SEO from '../components/SEO'
 import Panel from '../components/Panel'
 import { formatPostDate, formatReadingTime } from '../utils/helpers'
 import { rhythm, scale } from '../utils/typography'
@@ -15,6 +12,10 @@ import {
   loadFontsForCode,
   replaceAnchorLinksByLanguage
 } from '../utils/i18n'
+
+import { Header } from '../components/Header'
+import { Wrapper } from '../components/Wrapper'
+import { Head } from '../components/Head'
 
 const GITHUB_USERNAME = 'SleeplessByte'
 const GITHUB_REPO_NAME = 'derk-jan.com'
@@ -140,8 +141,8 @@ class BlogPostTemplate extends React.Component {
     )}`
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO
+      <Wrapper location={this.props.location} title={siteTitle}>
+        <Head
           lang={lang}
           title={post.frontmatter.title}
           description={post.frontmatter.description}
@@ -215,7 +216,7 @@ class BlogPostTemplate extends React.Component {
               Code in Bits and Pieces
             </Link>
           </h3>
-          <Bio />
+          <Header />
           <nav>
             <ul
               style={{
@@ -247,7 +248,7 @@ class BlogPostTemplate extends React.Component {
             </ul>
           </nav>
         </aside>
-      </Layout>
+      </Wrapper>
     )
   }
 }
