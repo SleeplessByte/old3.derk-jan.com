@@ -14,7 +14,9 @@ It's just not been a priority &mdash; It being &lsquo;me-time&rsquo; &mdash; and
 
 As for _bits and pieces_: In 2015 I wrote a short poem based on some challenge, which has since been [the 404 page of the company website][website-404]. Here it is in full:
 
-<article style="background: #f5f5f5; padding: 12px; margin-bottom: 24px">
+<article style="padding: 0px 18px;
+    margin-bottom: 24px;
+    border-left: var(--highlight) double 3px;">
   <header>
     <h2 style="margin-top: 12px; margin-bottom: 6px">Bits. And pieces.</h2>
     <small style="display: block; margin-bottom: 24px;">By <a href="https://derk-jan.com">Derk-Jan Karrenbeld</a> published on <time datetime="2015-04-09">9 April 2015</time></small>
