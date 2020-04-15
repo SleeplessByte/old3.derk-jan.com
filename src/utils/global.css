@@ -241,6 +241,12 @@ pre[data-line] {
   overflow: auto;
 }
 
+blockquote {
+  font-size: 15px;
+  font-family: monospace;
+  font-style: normal;
+}
+
 @media (max-width: 672px) {
   .gatsby-highlight {
     border-radius: 0;
