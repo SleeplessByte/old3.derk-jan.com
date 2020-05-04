@@ -1,6 +1,6 @@
 ---
 title: Cross tab events
-date: '2020-04-15T22:37:00Z'
+date: '2020-05-04T19:43:00Z'
 description: 'Running code on other tabs when something happens'
 ---
 
