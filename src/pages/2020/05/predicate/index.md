@@ -114,7 +114,7 @@ numbers
 // 34
 ```
 
-Predicates has a language feature **built-in** to support predicates! A predicate methods in Ruby are those methods that end with a question mark `?`; they return either `true` or `false`. The same example in Ruby looks a bit like this:
+Ruby has a language feature **built-in** to support predicates! Predicate methods in Ruby are those methods that end with a question mark `?`; they return either `true` or `false`. The same example in Ruby looks a bit like this:
 
 ```ruby {3,7}
 NUMBERS = [1, 2, 3, 5, 8, 13, 21, 34]
