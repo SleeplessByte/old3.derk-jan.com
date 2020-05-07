@@ -136,6 +136,57 @@ NUMBERS.select(&:even?)
 
 Predicates are used all over, and now you can name them as such. Each time a function (e.g. `.filter()`) takes an argument - an argument that must be _a function_ itself; a function which returns `true` or `false` based on some input (e.g `isEven`) - you know you're dealing with a `predicate`.
 
+Oh, and in Prolog? In Prolog define an `even` predicate like this:
+
+```prolog
+even(X) :- 0 is mod(X, 2).
+
+? even(1)
+false
+
+? even(2)
+true
+```
+
+And then filter a list based on even items:
+
+```prolog
+/** Predicates */
+
+even(X) :- 0 is mod(X, 2).
+odd(X)  :- 1 is mod(X, 2).
+
+/**
+ * Filter the list on even elements only
+ * 1. true when empty
+ * 2. otherwise, there are two options
+ *    - if Element (first item) is odd, the Next list does not get Element
+ *    - if Element is even, the Next list gets Element
+ */
+filter([], []).
+filter([Element|Tail],        Next) :-  odd(Element), filter(Tail, Next).
+filter([Element|Tail], [Element|T]) :- even(Element), filter(Tail, T).
+
+/**
+ * Prints a list by iteration through each element
+ * 1. true when empty
+ * 2. separate Element (first item) and the Tail (...rest)
+ *    - write the element + new line
+ *    - continue printlist with the tail of the list
+ */
+printlist([]).
+printlist([Element|Tail]) :-
+    write(Element),nl,
+    printlist(Tail).
+
+
+?- filter([1, 2, 3, 5, 8, 13, 21, 34], NewList), printlist(NewList).
+
+2
+8
+34
+```
+
 [about-prolog]: https://www.metalevel.at/prolog
 [about-goal]: https://multiagentcontest.org/publications/AppliedGOAL.pdf
 [wiki-boolean-functions]: https://en.wikipedia.org/wiki/Boolean-valued_function
