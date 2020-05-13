@@ -4,10 +4,7 @@ date: '2020-04-11T10:12:00Z'
 description: 'Optionally eating arguments, and passing the rest to the next process.'
 ---
 
-For one of my CLIs, I needed to remove the first argument from the argument list
-and forward the rest to a next process. In this example, my shell script is
-called `cli_process` and given arguments `arg1`, `arg2` and `arg3`, I want to
-execute `forward_process` with `arg2` and `arg3`.
+For one of my CLIs, I needed to remove the first argument from the argument list and forward the rest to a next process. In this example, my shell script is called `cli_process` and given arguments `arg1`, `arg2` and `arg3`, I want to execute `forward_process` with `arg2` and `arg3`.
 
 ```bash
 #!/usr/bin/env bash
@@ -31,14 +28,9 @@ _Originally posted as a [gist][gist], by myself_.
 ## Windows
 
 Windows `.bat` files support a similar token: `%*`, which is equivalent to `$@`.
-However, the `SHIFT` command, unlike the bash equivalent `shift`, doesn't modify
-this special token. There are various solutions that will attempt to eat the
-first `n` parameters, but all of them have edge-cases in which they don't
-properly work. Should you need this in windows, I recommend you write out the
-arguments manually `%2`, `%3` (and skip `%1`).
+However, the `SHIFT` command, unlike the bash equivalent `shift`, doesn't modify this special token. There are various solutions that will attempt to eat the first `n` parameters, but all of them have edge-cases in which they don't properly work. Should you need this in windows, I recommend you write out the arguments manually `%2`, `%3` (and skip `%1`).
 
-Here you can find some Windows solutions, but make sure you check the comments
-underneath each one:
+Here you can find some Windows solutions, but make sure you check the comments underneath each one:
 
 - [StackOverflow (935609): batch parameters: everything after %1][so-935609]
 - [StackOverflow (761615): Is there a way to indicate the last n parameters in a batch file?

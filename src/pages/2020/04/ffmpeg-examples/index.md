@@ -18,7 +18,7 @@ From [WikiPedia][wiki-transcoding]:
 
 The following command converts _any_ media file to an `.mp4` (with audio encoded using Advanced Audio Coding).
 
-```shell script
+```shell
 ffmpeg -y -i input_path -c:a aac -b:a 160k -vn -f mp4 -movflags +faststart output_path
 ```
 
@@ -99,13 +99,13 @@ video:0kB audio:4596kB subtitle:0kB other streams:0kB global headers:0kB muxing 
 
 In the example above, there is a **Input** section with _Metadata_ and _Duration_. This information can be extracted using [`ffprobe`][web-ffprobe].
 
-```shell script
+```shell
 ffprobe input
 ```
 
 In particular, I am interested in the _duration_ of the file.
 
-```shell script
+```shell
 ffprobe input -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1
 ```
 
@@ -117,7 +117,7 @@ What remains as output is either an error message or the duration, in (partial) 
 
 ### Example call and output
 
-```shell script
+```shell
 ffprobe "Daniel Powter - Bad Day.mp4" -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1
 235.152000
 ```

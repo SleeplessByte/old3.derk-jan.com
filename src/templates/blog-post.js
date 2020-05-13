@@ -16,6 +16,7 @@ import {
 import { Header } from '../components/Header'
 import { Wrapper } from '../components/Wrapper'
 import { Head } from '../components/Head'
+import { Signup } from '../components/Signup'
 
 const GITHUB_USERNAME = 'SleeplessByte'
 const GITHUB_REPO_NAME = 'derk-jan.com'
@@ -189,16 +190,14 @@ class BlogPostTemplate extends React.Component {
           </article>
         </main>
         <aside>
-          {
-            /*<div
+          <div
             style={{
               margin: '90px 0 40px 0',
               fontFamily: systemFont
             }}
           >
             <Signup cta={post.frontmatter.cta} />
-          </div>*/ null
-          }
+          </div>
           <h3
             style={{
               fontFamily: 'Montserrat, sans-serif',

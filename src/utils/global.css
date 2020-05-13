@@ -280,3 +280,46 @@ blockquote {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
+
+.embeddable-buttondown-form {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  padding: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.embeddable-buttondown-form label {
+  font-weight: 100;
+  font-size: 20px;
+  margin-bottom: 16px;
+  flex: 0 0 100%;
+}
+
+.embeddable-buttondown-form input[type='email'] {
+  color: var(--textNormal);
+  background-color: hsla(0, 0%, 0%, 0.2);
+  font-weight: 400;
+  margin-right: auto;
+  width: 300px;
+  max-width: 100%;
+  padding: 0;
+  height: 36px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 0;
+  margin-bottom: 4px;
+}
+
+.embeddable-buttondown-form input[type='submit'] {
+  margin-top: 8px;
+  background: var(--highlight);
+  border: 0;
+  border-radius: 4px;
+  margin-left: auto;
+  padding: 4px 16px;
+  margin: 0;
+  margin-bottom: 4px;
+  color: var(--bg);
+}
