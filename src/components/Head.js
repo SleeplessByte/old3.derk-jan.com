@@ -30,7 +30,7 @@ export const Head = ({ description, lang, meta, title, cover }) => {
   )
 
   const metaDescription = description || site.siteMetadata.description
-  const metaImage = cover || null
+  const metaImage = makeAbsolute(cover) || null
 
   return (
     <Helmet
@@ -85,6 +85,18 @@ export const Head = ({ description, lang, meta, title, cover }) => {
         .concat(meta)}
     />
   )
+}
+
+function makeAbsolute(url) {
+  if (!url) {
+    return url
+  }
+
+  if (url.startsWith('http')) {
+    return url
+  }
+
+  return [siteUrl, url].join('/').replace('//', '/')
 }
 
 Head.defaultProps = {
