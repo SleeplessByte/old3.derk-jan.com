@@ -21,7 +21,7 @@ class BlogIndexTemplate extends React.Component {
 
     return (
       <Wrapper location={this.props.location} title={siteTitle}>
-        <Head />
+        <Head title="All posts" />
         <aside>
           <Header />
         </aside>

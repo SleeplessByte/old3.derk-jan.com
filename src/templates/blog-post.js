@@ -148,6 +148,10 @@ class BlogPostTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description}
           slug={post.fields.slug}
+          cover={
+            post.frontmatter.cover &&
+            post.frontmatter.cover.childImageSharp.fluid.src
+          }
         />
         <main>
           <article>
@@ -273,6 +277,13 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        cover {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
       fields {
         slug

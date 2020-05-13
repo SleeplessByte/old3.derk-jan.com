@@ -10,7 +10,7 @@ import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 
-export const Head = ({ description, lang, meta, title }) => {
+export const Head = ({ description, lang, meta, title, cover }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -30,6 +30,7 @@ export const Head = ({ description, lang, meta, title }) => {
   )
 
   const metaDescription = description || site.siteMetadata.description
+  const metaImage = cover || null
 
   return (
     <Helmet
@@ -55,6 +56,10 @@ export const Head = ({ description, lang, meta, title }) => {
           property: `og:type`,
           content: `website`
         },
+        metaImage && {
+          property: `og:image`,
+          content: metaImage
+        },
         {
           name: `twitter:card`,
           content: `summary`
@@ -70,8 +75,14 @@ export const Head = ({ description, lang, meta, title }) => {
         {
           name: `twitter:description`,
           content: metaDescription
+        },
+        metaImage && {
+          property: `twitter:image`,
+          content: metaImage
         }
-      ].concat(meta)}
+      ]
+        .filter(Boolean)
+        .concat(meta)}
     />
   )
 }
@@ -86,5 +97,6 @@ Head.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
+  cover: PropTypes.string
 }
