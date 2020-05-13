@@ -16,6 +16,7 @@ export const Head = ({ description, lang, meta, title, cover }) => {
       query {
         site {
           siteMetadata {
+            siteUrl
             title
             description
             social {
@@ -30,7 +31,7 @@ export const Head = ({ description, lang, meta, title, cover }) => {
   )
 
   const metaDescription = description || site.siteMetadata.description
-  const metaImage = makeAbsolute(cover) || null
+  const metaImage = makeAbsolute(cover, site.siteMetadata.siteUrl) || null
 
   return (
     <Helmet
@@ -87,7 +88,7 @@ export const Head = ({ description, lang, meta, title, cover }) => {
   )
 }
 
-function makeAbsolute(url) {
+function makeAbsolute(url, baseUrl) {
   if (!url) {
     return url
   }
@@ -96,7 +97,7 @@ function makeAbsolute(url) {
     return url
   }
 
-  return [siteUrl, url].join('/').replace('//', '/')
+  return [baseUrl, url].join('/').replace(baseUrl + '//', baseUrl + '/')
 }
 
 Head.defaultProps = {
