@@ -164,6 +164,7 @@ pre[class*='language-'] ::selection {
   color: rgb(128, 147, 147);
 }
 
+.token.inserted,
 .token.string,
 .token.url {
   color: rgb(173, 219, 103);
@@ -173,6 +174,7 @@ pre[class*='language-'] ::selection {
   color: rgb(214, 222, 235);
 }
 
+.token.deleted,
 .token.number {
   color: rgb(247, 140, 108);
 }
