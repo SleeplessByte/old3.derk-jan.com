@@ -61,7 +61,7 @@ function useBroadcastValue(channel, event, initial = undefined) {
     // }
     //
     broadcastChannel.onmessage = (ev) => {
-      ev.type === event && setValue(ev.value)
+      ev.data.type === event && setValue(ev.data.value)
     }
 
     // Close the channel -- we no longer want to receive messages
@@ -112,7 +112,7 @@ function useBroadcastState(channel, event, initial = undefined) {
 
   useEffect(() => {
     broadcastChannel.onmessage = (ev) => {
-      ev.type === event && setValue(ev.value)
+      ev.data.type === event && setValue(ev.data.value)
     }
 
     // Each time the channel changes (different name, initial mount) or the
