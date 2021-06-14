@@ -39,7 +39,7 @@ export const Head = ({ description, lang, meta, title, cover }) => {
         lang
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={`%s • ${site.siteMetadata.title}`}
       meta={[
         {
           name: `description`,

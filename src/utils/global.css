@@ -5,7 +5,7 @@ body {
 }
 
 body.light {
-  --bg: #ffffff;
+  --bg: #f5f5f5;
   --bg-secondary: rgb(249, 250, 251);
   --header: var(--primary);
   --highlight: var(--primary);
@@ -33,61 +33,6 @@ body.dark {
   --inlineCode-bg: rgba(115, 124, 153, 0.2);
   --inlineCode-text: #e6e6e6;
   --form-shadow: 0 2px 15px 0 rgba(26, 26, 27, 0.637);
-}
-
-/*
-  RTL layout
-*/
-body:lang(fa) article,
-body:lang(ar) article,
-body:lang(he) article {
-  direction: rtl;
-}
-
-body:lang(fa) article pre,
-body:lang(ar) article pre,
-body:lang(he) article pre,
-body:lang(fa) article .translations,
-body:lang(ar) article .translations,
-body:lang(he) article .translations,
-body:lang(fa) .language-text,
-body:lang(ar) .language-text,
-body:lang(he) .language-text {
-  direction: ltr;
-}
-
-/* Fixing parentheses issue in text */
-body:lang(fa) .language-text,
-body:lang(ar) .language-text,
-body:lang(he) .language-text {
-  display: inline-block;
-}
-
-body:lang(fa) blockquote,
-body:lang(ar) blockquote,
-body:lang(he) blockquote {
-  border-left: unset;
-  border-right: 0.32813rem solid hsla(0, 0%, 0%, 0.9);
-  padding-right: 1.42188rem;
-  padding-left: unset;
-  margin-left: 0.75rem;
-  margin-right: -1.75rem;
-}
-
-/* styles for Persian language */
-body:lang(fa) article,
-body:lang(fa) header > h1 {
-  font-family: 'Vazir';
-}
-/* styles for Arabic language */
-body:lang(ar) article,
-body:lang(ar) header > h1 {
-  font-family: 'Cairo', sans-serif;
-}
-
-body:lang(ko) header,
-body:lang(ko) article {
-  word-break: keep-all;
 }
 
 /**

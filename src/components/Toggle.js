@@ -160,6 +160,8 @@ export default class Toggle extends PureComponent {
       (this.state.hasFocus ? ' react-toggle--focus' : '') +
       (this.props.disabled ? ' react-toggle--disabled' : '') +
       (className ? ' ' + className : '')
+
+    /* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */
     return (
       <div
         className={classes}
