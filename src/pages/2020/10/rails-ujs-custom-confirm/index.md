@@ -7,6 +7,8 @@ cover: './cover.jpg'
 
 In Rails, the [`@rails/ujs`][npm-rails-ujs] driver can be used to add interactions to a website, without needing to mix the JavaScript with the HTML. It's progressively enhancing a site, and will not do anything special if JavaScript is turned off. In particular, this driver allows to [Show a Confirmation][rails-guides-confirmations] before actually executing whatever the click / touch / interaction was supposed to do.
 
+![Thumbs up with a gradient background](./cover.jpg)
+
 From the documentation, the following Ruby or ERB (Embedded Ruby) code...
 
 ```ruby

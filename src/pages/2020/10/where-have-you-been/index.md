@@ -7,6 +7,8 @@ cover: './cover.jpg'
 
 I've had a few personal messages through various platforms asking me if I was doing alright, and unfortunately, I was not.
 
+![Stuffed animal bear with a COVID-19 mask, laying on the ground](./cover.jpg)
+
 ## Global Pandemic and bills
 
 When COVID-19 hit the world, initially it didn't matter that much to [XP Bytes][web-xpbytes], [Delft Solutions][web-delftsolutions] and [Sounders Music][web-soundersmusic]. XP Bytes and Delft Solutions are software agencies (which I founded), and these didn't get into trouble, until our clients did. Sounders Music had funding to make it through the year, and was therefore also not affected.

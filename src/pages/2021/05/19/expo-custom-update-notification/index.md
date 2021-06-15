@@ -2,7 +2,7 @@
 title: Expo Updates · Custom update notification
 date: '2021-06-15T01:54:00Z'
 description: 'Maintaining a fast start-up time, and in-app message to show your users that a new update is ready whilst using the application.'
-#cover: './cover.jpg'
+cover: './pexels-markus-winkler-4052195.jpg'
 ---
 
 As you might now, I am a big [Expo](https://docs.expo.io/) fan.
@@ -11,6 +11,8 @@ Various of my project are built on top of this marvelous framework and help me d
 In this article I'd like to show you how I use [`expo-updates`](https://docs.expo.io/versions/latest/sdk/updates/) to show a _custom_ update ready notification instead of relying on the start-up sequence, or the user periodically closing the application.
 
 > The `Updates` API from `expo` allows you to programmatically control and respond to over-the-air updates to your app.
+
+![Typewriter with a paper sticking out with a single word: "Update"](./pexels-markus-winkler-4052195.jpg)
 
 ## Configuration
 
